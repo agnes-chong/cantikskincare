@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Product Details</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css>
+   </head>
+   <body>
+      <div class="header">
+         <div class="container">
+            <div class="navbar">
+               <div class="logo">
+                  <a href="index.html"><img src="images/logo.png" alt="logo" width="125"></a>
+               </div>
+               <nav>
+                  <ul id="MenuItems">
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="about.html">About</a></li>
+                     <li><a href="products.html">Products</a></li>
+                     <li><a href="account.html">Account</a></li>
+                  </ul>
+               </nav>
+               <a href="cart.html"><img src="images/cart.png" alt="cart" width="30" height="30"></a>
+
+            </div>
+          </div>
+     </div>
+
+    <!-- product details -->
+      <div class="small-container product">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/toner1.png" alt="toner1" style="width:100%;" id="productImg">
+                    <div class="small-img-row">
+                        <div class="small-img-col">
+                            <img src="images/toner1.png" alt="toner1" style="width:100%;" class="smallImg">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/toner2.png" alt="toner2" style="width:100%;" class="smallImg">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/toner3.png" alt="toner3" style="width:100%;" class="smallImg">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/toner4.png" alt="toner4" style="width:100%;" class="smallImg">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-2">
+                   <p>Product</p>
+                   <h1>Rice Milk Toner</h1>
+                   <h4>RM23.70</h4>
+                   <input type="number" value="1" min="1" max="10">
+                   <button class="btn" type="submit" style="border: none;" onclick="function1()">Add to Cart</button>
+                    <h3>Product Details <i class="fa fa-indent"></i></h3>
+                    <br>
+                    <p>This toner is designed to help balance the skin's pH levels, remove any remaining traces of dirt or impurities, and prepare the skin for the next step in your skincare routine. It helps to hydrate and soothe the skin, 
+                     leaving it feeling refreshed and revitalized.</p>
+                </div>
+            </div>
+      </div>   
+
+      <!-- footer -->
+      
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="footer-col-1">
+                  <h3>Download Our App</h3>
+                  <p>Download app for ios or android</p>
+                  <div class="app-logo">
+                     <a href="https://www.apple.com/my/app-store"><img src="images/appstore.png" alt="appstore"></a>
+                     <a href="https://play.google.com"><img src="images/playstore.png" alt="play store"></a>
+                  </div>
+               </div>
+
+               <div class="footer-col-2">
+                  <img src="images/logo.png" alt="logo">
+                  <p>Our purpose is to sustainably make gorgeous skin accessible to everyone.</p> 
+               </div>
+
+               <div class="footer-col-3">
+                  <h3>Useful Links</h3>
+                  <ul>
+                     <li>Coupons</li>
+                     <li>Blog Post</li>
+                     <li>Return Policy</li>
+                     <li>Join Affiliates</li>
+                  </ul> 
+               </div>
+
+               <div class="footer-col-4">
+                  <h3>Follow Us</h3>
+                  <ul>
+                     <li>Facebook</li>
+                     <li>Twitter</li>
+                     <li>Instagram</li>
+                  </ul> 
+               </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 &#169; All Rights Reserved</p>
+         </div>
+         
+      </div>
+
+
+   <!-- js for product gallery -->
+   <script>
+      var productImg = document.getElementById("productImg");
+      var smallImg = document.getElementsByClassName("smallImg");
+   
+      for (var i = 0; i < smallImg.length; i++) {
+         smallImg[i].onclick = function() {
+            productImg.src = this.src;
+         }
+      }
+   
+      smallImg[0].onclick = function() {
+         productImg.src = smallImg[0].src;
+      }
+      smallImg[1].onclick = function() {
+         productImg.src = smallImg[1].src;
+      }
+      smallImg[2].onclick = function() {
+         productImg.src = smallImg[2].src;
+      }
+      smallImg[3].onclick = function() {
+         productImg.src = smallImg[3].src;
+      }
+
+      //pop up for add to cart
+      function function1() {
+         alert("Added to cart");
+      }
+   </script>
+        
+
+   </body>
+</html>
